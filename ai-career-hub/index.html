@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Career Hub | Your Path to AI Excellence</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <meta name="description" content="Free resources to help you become an AI/ML engineer. Join 10,000+ learners!" />
+  <!-- Open Graph Meta Tags for better social sharing -->
+  <meta property="og:title" content="AI Career Hub | Your Path to AI Excellence" />
+  <meta property="og:description" content="Free resources to help you become an AI/ML engineer. Join 10,000+ learners!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aicareer.hub" />
+  <meta property="og:image" content="https://aicareer.hub/og-image.jpg" />
+</head>
+<body>
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="loader">
+      <svg viewBox="0 0 80 80">
+        <circle id="loader-circle" cx="40" cy="40" r="32"></circle>
+      </svg>
+      <div class="loading-text">AI Career Hub</div>
+    </div>
+  </div>
+
+  <!-- Notification Bar -->
+  <div class="notification-bar">
+    <p>🔥 New Course: Advanced Deep Learning with PyTorch - <a href="#cta">Register Now</a></p>
+    <button class="close-notification" aria-label="Close notification"><i class="fas fa-times"></i></button>
+  </div>
+
+  <header id="main-header">
+    <div class="logo">
+      <div class="logo-icon"><i class="fas fa-robot"></i></div>
+      <h1>AI Career Hub</h1>
+    </div>
+    <button class="mobile-menu-btn" aria-label="Toggle menu">
+      <i class="fas fa-bars"></i>
+    </button>
+    <nav id="main-nav">
+      <a href="#features" class="nav-link">Features</a>
+      <a href="#roadmap" class="nav-link">Roadmap</a>
+      <a href="#testimonials" class="nav-link">Testimonials</a>
+      <a href="#pricing" class="nav-link">Pricing</a>
+      <a href="#cta" class="nav-link cta-button">Get Started</a>
+      <button class="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+      </button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="particles-container" id="particles-js"></div>
+    <div class="hero-content">
+      <h2 data-aos="fade-up">Launch Your Career in AI</h2>
+      <p data-aos="fade-up" data-aos-delay="100">Free resources to help you become an AI/ML engineer. Join 10,000+ learners worldwide!</p>
+      <div class="hero-buttons" data-aos="fade-up" data-aos-delay="200">
+        <button class="primary-button" onclick="scrollToCTA()">Get the Free Guide <i class="fas fa-arrow-right"></i></button>
+        <button class="secondary-button" onclick="openVideoModal()"><i class="fas fa-play-circle"></i> Watch Demo</button>
+      </div>
+      <div class="hero-stats" data-aos="fade-up" data-aos-delay="300">
+        <div class="stat">
+          <div class="stat-number"><span class="counter" data-target="10000">0</span>+</div>
+          <div class="stat-label">Students</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number"><span class="counter" data-target="50">0</span>+</div>
+          <div class="stat-label">Courses</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number"><span class="counter" data-target="95">0</span>%</div>
+          <div class="stat-label">Success Rate</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image" data-aos="zoom-in" data-aos-delay="400">
+      <img src="https://via.placeholder.com/500x300?text=AI+Learning+Platform" alt="AI Learning Platform" />
+    </div>
+    <div class="wave-divider">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,149.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+      </svg>
+    </div>
+  </section>
+
+  <section id="partners">
+    <h3><centre>Trusted By Industry Leaders</centre></h3>
+    <div class="partners-container">
+      <div class="partner" data-aos="fade-up">
+        <img src="https://via.placeholder.com/150x50?text=Google" alt="Google" />
+      </div>
+      <div class="partner" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://via.placeholder.com/150x50?text=Microsoft" alt="Microsoft" />
+      </div>
+      <div class="partner" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://via.placeholder.com/150x50?text=Amazon" alt="Amazon" />
+      </div>
+      <div class="partner" data-aos="fade-up" data-aos-delay="300">
+        <img src="https://via.placeholder.com/150x50?text=Meta" alt="Meta" />
+      </div>
+      <div class="partner" data-aos="fade-up" data-aos-delay="400">
+        <img src="https://via.placeholder.com/150x50?text=OpenAI" alt="OpenAI" />
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <h3 data-aos="fade-up">What You'll Learn</h3>
+    <div class="features-container">
+      <div class="feature" data-aos="fade-up">
+        <div class="feature-icon">
+          <i class="fab fa-python"></i>
+        </div>
+        <div class="feature-title">Python for AI</div>
+        <div class="feature-desc">Master Python programming fundamentals essential for AI development.</div>
+        <a href="#" class="feature-link">Learn more <i class="fas fa-chevron-right"></i></a>
+      </div>
+      <div class="feature" data-aos="fade-up" data-aos-delay="100">
+        <div class="feature-icon">
+          <i class="fas fa-brain"></i>
+        </div>
+        <div class="feature-title">Machine Learning Basics</div>
+        <div class="feature-desc">Learn core ML algorithms and when to apply them effectively.</div>
+        <a href="#" class="feature-link">Learn more <i class="fas fa-chevron-right"></i></a>
+      </div>
+      <div class="feature" data-aos="fade-up" data-aos-delay="200">
+        <div class="feature-icon">
+          <i class="fas fa-network-wired"></i>
+        </div>
+        <div class="feature-title">Deep Learning with TensorFlow</div>
+        <div class="feature-desc">Build neural networks and deploy models with TensorFlow.</div>
+        <a href="#" class="feature-link">Learn more <i class="fas fa-chevron-right"></i></a>
+      </div>
+      <div class="feature" data-aos="fade-up" data-aos-delay="300">
+        <div class="feature-icon">
+          <i class="fas fa-project-diagram"></i>
+        </div>
+        <div class="feature-title">Build Real Projects</div>
+        <div class="feature-desc">Apply your skills to real-world AI projects with guided tutorials.</div>
+        <a href="#" class="feature-link">Learn more <i class="fas fa-chevron-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="roadmap">
+    <h3 data-aos="fade-up">Your AI Career Roadmap</h3>
+    <div class="roadmap-container" data-aos="fade-up">
+      <div class="roadmap-timeline">
+        <div class="roadmap-item active">
+          <div class="roadmap-dot"></div>
+          <div class="roadmap-content">
+            <h4>Step 1: Foundations</h4>
+            <p>Learn Python programming and mathematics for AI</p>
+            <span class="roadmap-duration">4 weeks</span>
+          </div>
+        </div>
+        <div class="roadmap-item">
+          <div class="roadmap-dot"></div>
+          <div class="roadmap-content">
+            <h4>Step 2: Machine Learning</h4>
+            <p>Master core ML algorithms and data preprocessing</p>
+            <span class="roadmap-duration">6 weeks</span>
+          </div>
+        </div>
+        <div class="roadmap-item">
+          <div class="roadmap-dot"></div>
+          <div class="roadmap-content">
+            <h4>Step 3: Deep Learning</h4>
+            <p>Build neural networks with TensorFlow and PyTorch</p>
+            <span class="roadmap-duration">8 weeks</span>
+          </div>
+        </div>
+        <div class="roadmap-item">
+          <div class="roadmap-dot"></div>
+          <div class="roadmap-content">
+            <h4>Step 4: Specialization</h4>
+            <p>Focus on NLP, Computer Vision, or Reinforcement Learning</p>
+            <span class="roadmap-duration">6 weeks</span>
+          </div>
+        </div>
+        <div class="roadmap-item">
+          <div class="roadmap-dot"></div>
+          <div class="roadmap-content">
+            <h4>Step 5: Portfolio Projects</h4>
+            <p>Build impressive projects to showcase your skills</p>
+            <span class="roadmap-duration">4 weeks</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <h3 data-aos="fade-up">What Others Say</h3>
+    <div class="testimonial-carousel" data-aos="fade-up">
+      <button class="carousel-arrow prev" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+      <div class="testimonial-container">
+        <div class="testimonial">
+          <div class="testimonial-image">
+            <img src="https://via.placeholder.com/100x100?text=AR" alt="Ananya R." />
+          </div>
+          <blockquote>
+            "This hub helped me get my first job in AI! The structured learning path made it easy to progress from basics to advanced concepts."
+            <div class="testimonial-author">– Ananya R., Data Scientist</div>
+            <div class="testimonial-company">Google</div>
+          </blockquote>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-image">
+            <img src="https://via.placeholder.com/100x100?text=RS" alt="Rishi S." />
+          </div>
+          <blockquote>
+            "The roadmap was clear and beginner-friendly. I went from knowing nothing about AI to building my own models in just 3 months."
+            <div class="testimonial-author">– Rishi S., ML Engineer</div>
+            <div class="testimonial-company">Microsoft</div>
+          </blockquote>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-image">
+            <img src="https://via.placeholder.com/100x100?text=MK" alt="Maya K." />
+          </div>
+          <blockquote>
+            "The project-based approach helped me build a strong portfolio that impressed recruiters. Highly recommended for career changers!"
+            <div class="testimonial-author">– Maya K., AI Researcher</div>
+            <div class="testimonial-company">OpenAI</div>
+          </blockquote>
+        </div>
+      </div>
+      <button class="carousel-arrow next" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
+      <div class="carousel-dots">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <h3 data-aos="fade-up">Choose Your Learning Path</h3>
+    <div class="pricing-toggle" data-aos="fade-up">
+      <span>Monthly</span>
+      <label class="switch">
+        <input type="checkbox" id="pricing-toggle">
+        <span class="slider round"></span>
+      </label>
+      <span>Yearly <span class="discount">Save 20%</span></span>
+    </div>
+    <div class="pricing-container">
+      <div class="pricing-plan" data-aos="fade-up">
+        <div class="plan-badge">Popular</div>
+        <div class="plan-name">Free</div>
+        <div class="plan-price">
+          <span class="currency">$</span>
+          <span class="amount">0</span>
+          <span class="period">/forever</span>
+        </div>
+        <ul class="plan-features">
+          <li><i class="fas fa-check"></i> Access to basic tutorials</li>
+          <li><i class="fas fa-check"></i> Community forum access</li>
+          <li><i class="fas fa-check"></i> Weekly newsletter</li>
+          <li class="disabled"><i class="fas fa-times"></i> Guided projects</li>
+          <li class="disabled"><i class="fas fa-times"></i> Career coaching</li>
+        </ul>
+        <button class="plan-button">Get Started</button>
+      </div>
+      <div class="pricing-plan featured" data-aos="fade-up" data-aos-delay="100">
+        <div class="plan-badge">Recommended</div>
+        <div class="plan-name">Pro</div>
+        <div class="plan-price">
+          <span class="currency">$</span>
+          <span class="amount monthly">29</span>
+          <span class="amount yearly">19</span>
+          <span class="period">/month</span>
+        </div>
+        <ul class="plan-features">
+          <li><i class="fas fa-check"></i> All Free features</li>
+          <li><i class="fas fa-check"></i> 50+ premium courses</li>
+          <li><i class="fas fa-check"></i> Guided projects</li>
+          <li><i class="fas fa-check"></i> Certificate of completion</li>
+          <li><i class="fas fa-check"></i> Priority support</li>
+        </ul>
+        <button class="plan-button">Start 7-Day Trial</button>
+      </div>
+      <div class="pricing-plan" data-aos="fade-up" data-aos-delay="200">
+        <div class="plan-badge">Complete</div>
+        <div class="plan-name">Enterprise</div>
+        <div class="plan-price">
+          <span class="currency">$</span>
+          <span class="amount monthly">99</span>
+          <span class="amount yearly">79</span>
+          <span class="period">/month</span>
+        </div>
+        <ul class="plan-features">
+          <li><i class="fas fa-check"></i> All Pro features</li>
+          <li><i class="fas fa-check"></i> 1-on-1 career coaching</li>
+          <li><i class="fas fa-check"></i> Resume review</li>
+          <li><i class="fas fa-check"></i> Interview preparation</li>
+          <li><i class="fas fa-check"></i> Job placement assistance</li>
+        </ul>
+        <button class="plan-button">Contact Sales</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="cta">
+    <div class="cta-content" data-aos="fade-up">
+      <h3>Start Learning AI Today</h3>
+      <p>Join over 10,000 students who have transformed their careers with our comprehensive AI curriculum.</p>
+      <form id="signup-form">
+        <div class="input-group">
+          <input type="email" id="email" placeholder="Enter your email" required />
+          <label for="email">Email Address</label>
+        </div>
+        <div class="input-group">
+          <input type="text" id="name" placeholder="Your name" required />
+          <label for="name">Full Name</label>
+        </div>
+        <div class="input-group">
+          <select id="interest" required>
+            <option value="" disabled selected>Select your interest</option>
+            <option value="beginner">Complete Beginner</option>
+            <option value="python">Python Developer</option>
+            <option value="data">Data Scientist</option>
+            <option value="ml">ML Engineer</option>
+          </select>
+          <label for="interest">Your Background</label>
+        </div>
+        <button type="submit">Send Me the Guide <i class="fas fa-paper-plane"></i></button>
+        <div class="form-message success">
+          Success! Check your email for the AI career guide.
+        </div>
+        <div class="form-message error">
+          Oops! Something went wrong. Please try again.
+        </div>
+      </form>
+    </div>
+    <div class="cta-image" data-aos="fade-left">
+      <img src="https://via.placeholder.com/400x300?text=AI+Career+Guide" alt="AI Career Guide" />
+    </div>
+  </section>
+
+  <section id="faq">
+    <h3 data-aos="fade-up">Frequently Asked Questions</h3>
+    <div class="faq-container">
+      <div class="faq-item" data-aos="fade-up">
+        <div class="faq-question">
+          <h4>Do I need prior programming experience?</h4>
+          <button class="faq-toggle"><i class="fas fa-plus"></i></button>
+        </div>
+        <div class="faq-answer">
+          <p>No prior programming experience is required for our beginner tracks. We start from the basics and gradually build up your skills. However, some familiarity with programming concepts will help you progress faster.</p>
+        </div>
+      </div>
+      <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="faq-question">
+          <h4>How long does it take to complete the curriculum?</h4>
+          <button class="faq-toggle"><i class="fas fa-plus"></i></button>
+        </div>
+        <div class="faq-answer">
+          <p>The complete curriculum takes about 6 months if you dedicate 10-15 hours per week. However, you can go at your own pace, and many students start applying for jobs after 3-4 months of consistent learning.</p>
+        </div>
+      </div>
+      <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+        <div class="faq-question">
+          <h4>Will I get a certificate upon completion?</h4>
+          <button class="faq-toggle"><i class="fas fa-plus"></i></button>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, Pro and Enterprise subscribers receive certificates for each completed course and a final certificate for the entire curriculum. These certificates can be shared on LinkedIn and other platforms.</p>
+        </div>
+      </div>
+      <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+        <div class="faq-question">
+          <h4>Do you offer job placement assistance?</h4>
+          <button class="faq-toggle"><i class="fas fa-plus"></i></button>
+        </div>
+        <div class="faq-answer">
+          <p>Enterprise subscribers receive comprehensive job placement assistance, including resume review, interview preparation, and connections with our hiring partners. Pro subscribers get access to our job board and networking events.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <div class="footer-logo">
+            <i class="fas fa-robot"></i>
+            <h2>AI Career Hub</h2>
+          </div>
+          <p>Your complete resource for launching a successful career in AI and machine learning.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Tutorials</a></li>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Community</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 AI Career Hub. All rights reserved.</p>
+        <div class="footer-language">
+          <select id="language-selector">
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Video Modal -->
+  <div class="modal" id="video-modal">
+    <div class="modal-content">
+      <button class="close-modal" aria-label="Close modal"><i class="fas fa-times"></i></button>
+      <div class="video-container">
+        <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cookie Consent -->
+  <div class="cookie-consent">
+    <div class="cookie-text">
+      <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+    </div>
+    <div class="cookie-buttons">
+      <button class="cookie-btn accept">Accept All</button>
+      <button class="cookie-btn settings">Cookie Settings</button>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
